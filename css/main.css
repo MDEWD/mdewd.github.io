@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffeb;
+  background: #ff96df;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3127,4 +3127,17 @@ pre .javascript .function {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+body::before {
+  background-image: url("https://graph.baidu.com/pcpage/similar?originSign=11283b7485533193fbefc01564731343&srcp=crs_pc_wallpaper&tn=pc&idctag=nj&sids=10005_10042_10053_10061_10091_10190_10291_10391_10693_10705_10301_10709_10902_11005_10903_11000_10014_10908_10017_10907_11013_11031_11041_10072_10082_11070_11080_9999&logid=2142195730&entrance=general&tpl_from=pc&image=https%3A%2F%2Fgtb.baidu.com%2FHttpService%2Fget%3Fp%3DdHlwZT1pbWFnZS9qcGVnJm49dmlzJnQ9cHJvZHVjdF9ydHMmYz10YjppZyZyPTI3NjQ0OTI1MjcsMTk5NzYyMjI5NQ%3D%3D&carousel=502&index=2&page=1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
