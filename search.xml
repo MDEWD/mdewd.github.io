@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python]]></title>
+    <url>%2F2019%2F08%2F08%2Fpython%2F</url>
+    <content type="text"><![CDATA[#函数式编程 ##装饰器由于函数也是一个对象，而且函数对象可以被赋值给变量，所以，通过变量也能调用该函数。 1234def now(): print(&apos;2019-8-8&apos;)f = nowf() 2019-8-8]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[My first blog]]></title>
     <url>%2F2019%2F08%2F04%2FMy-first-blog%2F</url>
     <content type="text"><![CDATA[博客第一篇文章三级标题 列表1 列表2 a子列表 b子列表 列表3 侧面的链接图标用Font Awesome网站的图标 设置网站图标,要下载两个图标，16x16和32x32的. 知乎字体是斜线的字体加粗了呢&lt;html&gt;&lt;/html&gt; 123456&lt;html&gt; &lt;head&gt; &lt;title&gt;这是标题哦&lt;/title&gt; &lt;/head&gt; &lt;body&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
