@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[python]]></title>
     <url>%2F2019%2F08%2F08%2Fpython%2F</url>
-    <content type="text"><![CDATA[#函数式编程 ##装饰器由于函数也是一个对象，而且函数对象可以被赋值给变量，所以，通过变量也能调用该函数。 1234def now(): print(&apos;2019-8-8&apos;)f = nowf() 2019-8-8]]></content>
+    <content type="text"><![CDATA[函数式编程装饰器由于函数也是一个对象，而且函数对象可以被赋值给变量，所以，通过变量也能调用该函数。 1234def now(): print(&apos;2019-8-8&apos;)f = nowf() 12019-8-8 函数对象有一个name属性，可以拿到函数的名字 12now._name_f._name_ 12nownow 现在，假设我们要增强now()函数的功能，比如，在函数调用前后自动打印日志，但又不希望修改now()函数的定义，这种在代码运行期间动态增加功能的方式，称之为“装饰器”（Decorator）idle]]></content>
       <categories>
         <category>python</category>
       </categories>
