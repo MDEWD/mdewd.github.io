@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="QIQI">
 <meta property="og:description" content="1 什么是TSTLSTL（Standard Template Library），即标准模板库，是一个具有工业强度的，高效的C++程序库。它被容纳于C++标准程序库（C++ Standard Library）中，是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-07T08:22:36.315Z">
+<meta property="og:updated_time" content="2019-11-07T08:25:47.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++之STL">
 <meta name="twitter:description" content="1 什么是TSTLSTL（Standard Template Library），即标准模板库，是一个具有工业强度的，高效的C++程序库。它被容纳于C++标准程序库（C++ Standard Library）中，是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件的">
@@ -453,7 +453,9 @@
 <p>所有容器都有以下两个成员函数：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int size()：//返回容器对象中元素的个数。</span><br><span class="line">bool empty()：//判断容器对象是否为空。</span><br></pre></td></tr></table></figure>
 
-<p>顺序容器和关联容器还有以下成员函数：<br>begin()：返回指向容器中第一个元素的迭代器。<br>end()：返回指向容器中最后一个元素后面的位置的迭代器。<br>rbegin()：返回指向容器中最后一个元素的反向迭代器。<br>rend()：返回指向容器中第一个元素前面的位置的反向迭代器。<br>erase(…)：从容器中删除一个或几个元素。该函数参数较复杂，此处省略。<br>clear()：从容器中删除所有元素。</p>
+<p>顺序容器和关联容器还有以下成员函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">begin()：返回指向容器中第一个元素的迭代器。</span><br><span class="line">end()：返回指向容器中最后一个元素后面的位置的迭代器。</span><br><span class="line">rbegin()：返回指向容器中最后一个元素的反向迭代器。</span><br><span class="line">rend()：返回指向容器中第一个元素前面的位置的反向迭代器。</span><br><span class="line">erase(...)：从容器中删除一个或几个元素。该函数参数较复杂，此处省略。</span><br><span class="line">clear()：从容器中删除所有元素。</span><br></pre></td></tr></table></figure>
+
 <p>如果一个容器是空的，则 begin() 和 end() 的返回值相等，rbegin() 和 rend() 的返回值也相等。</p>
 <p>顺序容器还有以下常用成员函数：<br>front()：返回容器中第一个元素的引用。<br>back()：返回容器中最后一个元素的引用。<br>push_back()：在容器末尾增加新元素。<br>pop_back()：删除容器末尾的元素。<br>insert(…)：插入一个或多个元素。该函数参数较复杂，此处省略。</p>
 
