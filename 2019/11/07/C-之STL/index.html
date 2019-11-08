@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="QIQI">
 <meta property="og:description" content="1什么是STL   STL(Standard Template Library),即标准模板库,是一个具有工业强度的,高效的C++程序库。它被容纳于C++标准程序库(C++ Standard Library)中,是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-08T11:03:25.384Z">
+<meta property="og:updated_time" content="2019-11-08T11:15:26.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++之STL">
 <meta name="twitter:description" content="1什么是STL   STL(Standard Template Library),即标准模板库,是一个具有工业强度的,高效的C++程序库。它被容纳于C++标准程序库(C++ Standard Library)中,是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.4k
+                  2.9k
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  8
+                  10
                 </span>
               
             </div>
@@ -468,6 +468,20 @@
 <p>4) 常量反向迭代器，定义方法如下：<br><code>容器类名::const_reverse_iterator  迭代器名;</code></p>
 <p>迭代器用法示例<br>下面的程序演示了如何通过迭代器遍历一个 vector 容器中的所有元素。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;  <span class="comment">//v是存放int类型变量的可变长数组，开始时没有元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> n = <span class="number">0</span>; n&lt;<span class="number">5</span>; ++n)</span><br><span class="line">        v.push_back(n);  <span class="comment">//push_back成员函数在vector容器尾部添加一个元素</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator i;  <span class="comment">//定义正向迭代器</span></span><br><span class="line">    <span class="keyword">for</span> (i = v.begin(); i != v.end(); ++i) &#123;  <span class="comment">//用迭代器遍历容器</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *i &lt;&lt; <span class="string">" "</span>;  <span class="comment">//*i 就是迭代器i指向的元素</span></span><br><span class="line">        *i *= <span class="number">2</span>;  <span class="comment">//每个元素变为原来的2倍</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//用反向迭代器遍历容器</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::reverse_iterator j = v.rbegin(); j != v.rend(); ++j)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *j &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 1 2 3 4</span><br><span class="line">8 6 4 2 0</span><br></pre></td></tr></table></figure>
+
+<p>第 6 行，vector 容器有多个构造函数，如果用无参构造函数初始化，则容器一开始是空的。</p>
+<p>第 10 行，begin 成员函数返回指向容器中第一个元素的迭代器。++i 使得 i 指向容器中的下一个元素。end 成员函数返回的不是指向最后一个元素的迭代器，而是指向最后一个元素后面的位置的迭代器，因此循环的终止条件是i != v.end()。</p>
+<p>第 16 行定义了反向迭代器用以遍历容器。反向迭代器进行++操作后，会指向容器中的上一个元素。rbegin 成员函数返回指向容器中最后一个元素的迭代器，rend 成员函数返回指向容器中第一个元素前面的位置的迭代器，因此本循环实际上是从后往前遍历整个数组。</p>
+<p>如果迭代器指向了容器中最后一个元素的后面或第一个元素的前面，再通过该迭代器访问元素，就有可能导致程序崩溃，这和访问 NULL 或未初始化的指针指向的地方类似。</p>
+<p>第 10 行和第 16 行，写++i、++j相比于写i++、j++，程序的执行速度更快。回顾++被重载成前置和后置运算符的例子如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CDemo CDemo::operator++ ()</span><br><span class="line">&#123;  //前置++</span><br><span class="line">    ++n;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line">CDemo CDemo::operator ++(int k)</span><br><span class="line">&#123;  //后置++</span><br><span class="line">    CDemo tmp(*this);  //记录修改前的对象</span><br><span class="line">    n++;</span><br><span class="line">    return tmp;  //返回修改前的对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>后置++要多生成一个局部对象 tmp，因此执行速度比前置的慢。同理，迭代器是一个对象，STL 在重载迭代器的++运算符时，后置形式也比前置形式慢。在次数很多的循环中，++i和i++可能就会造成运行时间上可观的差别了。因此，对循环控制变量i，要养成写++i、不写i++的习惯。</p>
+<p>注意，容器适配器 stack、queue 和 priority_queue 没有迭代器。容器适配器有一些成员函数，可以用来对元素进行访问。 </p>
+
       
     </div>
     
