@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="QIQI">
 <meta property="og:description" content="1什么是STL   STL(Standard Template Library),即标准模板库,是一个具有工业强度的,高效的C++程序库。它被容纳于C++标准程序库(C++ Standard Library)中,是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-07T09:52:50.974Z">
+<meta property="og:updated_time" content="2019-11-08T11:03:25.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++之STL">
 <meta name="twitter:description" content="1什么是STL   STL(Standard Template Library),即标准模板库,是一个具有工业强度的,高效的C++程序库。它被容纳于C++标准程序库(C++ Standard Library)中,是ANSI/ISO C++标准中最新的也是极具革命性的一部分。该库包含了诸多在计算机科学领域里所常用的基本数据结构和基本算法。为广大C++程序员们提供了一个可扩展的应用框架，高度体现了软件">
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.1k
+                  2.4k
                 </span>
               
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  8
                 </span>
               
             </div>
@@ -438,7 +438,7 @@
 <p>   <strong>STL另一个重要特性是它不是面向对象的</strong>。为了具有足够通用性，STL主要依赖于模板而不是封装，继承和虚函数（多态性）——OOP的三个要素。你在STL中找不到任何明显的类继承关系。这好像是一种倒退，但这正好是使得STL的组件具有广泛通用性的底层特征。另外，由于STL是基于模板，内联函数的使用使得生成的代码短小高效；</p>
 <p>从逻辑层次来看，在STL中体现了泛型化程序设计的思想，引入了诸多新的名词，比如像需求(requirements),概念(concept),模型(model),容器(container),算法(algorithmn),迭代子(iterator)等。与OOP(object-oriented programming中的多态(polymorphism)一样,泛型也是一种软件的复用技术。</p>
 <p>从实现层次看，整个STL是以一种类型参数化的方式实现的，这种方式基于一个在早先C++标准中没有出现的语言特性–模板(template)</p>
-<h1 id="2STL内容介绍"><a href="#2STL内容介绍" class="headerlink" title="2STL内容介绍"></a>2STL内容介绍</h1><p>STL中六大组件：<br>①:容器（Container），是一种数据结构，如list，vector，和deques ，以模板类的方法提供。为了访问容器中的数据，可以使用由容器类输出的迭代器；<br>②:迭代器（Iterator），提供了访问容器中对象的方法。例如，可以使用一对迭代器指定list或vector中的一定范围的对象。迭代器就如同一个指针。事实上，C++的指针也是一种迭代器。但是，迭代器也可以是那些定义了operator*()以及其他类似于指针的操作符地方法的类对象；<br>③:算法（Algorithm），是用来操作容器中的数据的模板函数。例如，STL用sort()来对一个vector中的数据进行排序，用find()来搜索一个list中的对象，函数本身与他们操作的数据的结构和类型无关，因此他们可以在从简单数组到高度复杂容器的任何数据结构上使用；<br>④:仿函数（Functor）<br>⑤:适配器（Adaptor）<br>⑥:分配器（allocator）</p>
+<h1 id="2STL内容介绍"><a href="#2STL内容介绍" class="headerlink" title="2STL内容介绍"></a>2STL内容介绍</h1><p>STL中六大组件：<br>①:容器（Container），是一种数据结构，如list，vector，和deques ，以模板类的方法提供。为了访问容器中的数据，可以使用由容器类输出的迭代器；<br>②:迭代器（Iterator），提供了访问容器中对象的方法。例如，可以使               用一对迭代器指定list或vector中的一定范围的对象。迭代器就如同一个指针。事实上，C++的指针也是一种迭代器。但是，迭代器也可以是那些定义了operator*()以及其他类似于指针的操作符地方法的类对象；<br>③:算法（Algorithm），是用来操作容器中的数据的模板函数。例如，STL用sort()来对一个vector中的数据进行排序，用find()来搜索一个list中的对象，函数本身与他们操作的数据的结构和类型无关，因此他们可以在从简单数组到高度复杂容器的任何数据结构上使用；<br>④:仿函数（Functor）<br>⑤:适配器（Adaptor）<br>⑥:分配器（allocator）</p>
 <h2 id="2-1-容器-container"><a href="#2-1-容器-container" class="headerlink" title="2.1 容器(container)"></a>2.1 容器(container)</h2><p>容器（container）用于存放数据的类模板。可变长数组、链表、平衡二叉树等数据结构在 STL 中都被实现为容器。</p>
 <p>STL 中的许多算法（即函数模板），如排序、查找等算法，在执行过程中会对容器中的元素进行比较。这些算法在比较元素是否相等时通常用运算符进行，比较大小通常用&lt;运算符进行，因此，被放入容器的对象所属的类最好重载==和&lt;运算符，以使得两个对象用==和&lt;进行比较是有定义的。<br>容器分为两大类：<strong>序列容器(Sequence Container)</strong>和<strong>关联容器（Associated Container）</strong>。</p>
 <h3 id="2-1-1-序列容器（Sequence-Container）"><a href="#2-1-1-序列容器（Sequence-Container）" class="headerlink" title="2.1.1 序列容器（Sequence Container）"></a>2.1.1 序列容器（Sequence Container）</h3><p>序列容器有以下三种：可变长动态数组 vector、双端队列 deque、双向链表 list。</p>
@@ -461,7 +461,13 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">front(); <span class="comment">//返回容器中第一个元素的引用。</span></span><br><span class="line">back();  <span class="comment">//返回容器中最后一个元素的引用。</span></span><br><span class="line">push_back();<span class="comment">//在容器末尾增加新元素。</span></span><br><span class="line">pop_back();<span class="comment">//删除容器末尾的元素。</span></span><br><span class="line">insert(...);<span class="comment">//插入一个或多个元素。该函数参数较复杂，此处省略。</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="2-2-迭代器-Iterator"><a href="#2-2-迭代器-Iterator" class="headerlink" title="2.2 迭代器(Iterator)"></a>2.2 迭代器(Iterator)</h2><p>要访问顺序容器和关联容器中的元素，需要通过“迭代器（iterator）”进行。迭代器是一个变量，相当于容器和操纵容器的算法之间的中介。迭代器可以指向容器中的某个元素，通过迭代器就可以读写它指向的元素。从这一点上看，迭代器和<strong>指针</strong>类似。</p>
-
+<p>迭代器按照定义方式分成以下四种。</p>
+<p>1) 正向迭代器，定义方法如下：<br><code>容器类名::iterator  迭代器名;</code>    </p>
+<p>2) 常量正向迭代器，定义方法如下：<br><code>容器类名::const_iterator  迭代器名;</code></p>
+<p>3) 反向迭代器，定义方法如下：<br><code>容器类名::reverse_iterator  迭代器名;</code></p>
+<p>4) 常量反向迭代器，定义方法如下：<br><code>容器类名::const_reverse_iterator  迭代器名;</code></p>
+<p>迭代器用法示例<br>下面的程序演示了如何通过迭代器遍历一个 vector 容器中的所有元素。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;  <span class="comment">//v是存放int类型变量的可变长数组，开始时没有元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> n = <span class="number">0</span>; n&lt;<span class="number">5</span>; ++n)</span><br><span class="line">        v.push_back(n);  <span class="comment">//push_back成员函数在vector容器尾部添加一个元素</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator i;  <span class="comment">//定义正向迭代器</span></span><br><span class="line">    <span class="keyword">for</span> (i = v.begin(); i != v.end(); ++i) &#123;  <span class="comment">//用迭代器遍历容器</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *i &lt;&lt; <span class="string">" "</span>;  <span class="comment">//*i 就是迭代器i指向的元素</span></span><br><span class="line">        *i *= <span class="number">2</span>;  <span class="comment">//每个元素变为原来的2倍</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="comment">//用反向迭代器遍历容器</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::reverse_iterator j = v.rbegin(); j != v.rend(); ++j)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *j &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
